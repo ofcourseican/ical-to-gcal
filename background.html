@@ -1,0 +1,12 @@
+<html>
+<head>
+<script>
+chrome.extension.onRequest.addListener(function (request, sender, sendResponse) {
+  if (request.show_page_action) {
+    chrome.pageAction.show(sender.tab.id);
+  }
+})
+</script>
+</head>
+<body></body>
+</html>

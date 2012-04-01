@@ -1,0 +1,24 @@
+{
+  "name" : "ical to gcal",
+  "version" : "0.1",
+  "description" : "Allows you to add events, found in an ics file on the current site, directly to your Google Calendar",
+  "background_page": "background.html",
+  "permissions": ["tabs", "http://*/*", "https://*/*"],
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "exclude_globs" : ["*google.com/calendar/*"],
+      "js" : ["ijp.js","contentscript.js"],
+      "run_at" : "document_idle",
+      "all_frames" : true
+    }
+  ],
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "add events to google calendar"
+  }
+}
