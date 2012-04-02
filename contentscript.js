@@ -1,4 +1,4 @@
-var re = new RegExp(".*ics\/.*|.*ics$|.*ical\/.*");
+var re = new RegExp(".*ics.*|.*ical.*|.*cal.*");
 var allLinks = document.links;
 var events = [];
 
