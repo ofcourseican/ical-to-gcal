@@ -4,8 +4,15 @@ var events = [];
 
 function get_events() {
   var event_list = new Array();
+  var count = 0;
+
   for (var i=0; i<document.links.length; i++) {
+    // stops after 10 downloaded files
+    if (count > 10){
+      break;
+    }
     if (re.exec(document.links[i].href)) {
+      count = count + 1;
       var oRequest = new XMLHttpRequest();
       try {
         oRequest.open("GET",document.links[i].href,false);
