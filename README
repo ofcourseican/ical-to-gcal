@@ -1,0 +1,6 @@
+A Chrome extension that searches for ical/ics files on a website.
+
+It generates a page action icon from where you can add these events
+directly to your Google Calendar.
+
+Kai Timmer <email@kaitimmer.de>
